@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/homeImg"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_baseline_account_circle_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/home_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/welcome_to_hunger_donate_food_app"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/homeImg"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/home_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/email_Gmail_com"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/homeImg"
+                        app:layout_constraintTop_toBottomOf="@id/home_title" />
+
+                    <TextView
+                        android:id="@+id/home_updateProfile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/update_profile"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                        app:layout_constraintStart_toEndOf="@+id/homeImg"
+                        app:layout_constraintTop_toBottomOf="@+id/home_email" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_baseline_chevron_right_24"
+                        app:layout_constraintBottom_toBottomOf="@id/home_updateProfile"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/home_updateProfile" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home_order_cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/home_guildeline"
+                app:layout_constraintStart_toStartOf="@+id/home_cardView"
+                app:layout_constraintTop_toBottomOf="@+id/home_cardView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/home_order_ImageView"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_baseline_account_circle_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/home_order_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/home_order_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="1"
+                        android:text="Total Orders"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView"
+                        app:layout_constraintTop_toTopOf="@+id/home_order_ImageView" />
+
+                    <TextView
+                        android:id="@+id/home_req"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="assigned"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView"
+                        app:layout_constraintTop_toBottomOf="@id/home_order_title" />
+
+                    <TextView
+                        android:id="@+id/home_req_datetime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:maxLines="1"
+                        android:text="40"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/home_order_ImageView"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView"
+                        app:layout_constraintTop_toBottomOf="@id/home_req" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home_order_cardView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/home_cardView"
+                app:layout_constraintStart_toStartOf="@+id/home_guildeline"
+                app:layout_constraintTop_toBottomOf="@+id/home_cardView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/gradient_green">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/home_order_ImageView2"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_baseline_account_circle_24"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/home_order_title2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/home_order_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="1"
+                        android:text="Total Orders"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView2"
+                        app:layout_constraintTop_toTopOf="@+id/home_order_ImageView2" />
+
+                    <TextView
+                        android:id="@+id/home_req2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="assigned"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView2"
+                        app:layout_constraintTop_toBottomOf="@id/home_order_title2" />
+
+                    <TextView
+                        android:id="@+id/home_req_datetime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:maxLines="1"
+                        android:text="40"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/home_order_ImageView2"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView2"
+                        app:layout_constraintTop_toBottomOf="@id/home_req2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home_order_cardView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/home_guildeline"
+                app:layout_constraintStart_toStartOf="@+id/home_cardView"
+                app:layout_constraintTop_toBottomOf="@+id/home_order_cardView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/gradient_green">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/home_order_ImageView3"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_baseline_account_circle_24"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/home_order_title3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/home_order_title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="1"
+                        android:text="Total Orders"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView3"
+                        app:layout_constraintTop_toTopOf="@+id/home_order_ImageView3" />
+
+                    <TextView
+                        android:id="@+id/home_req3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="assigned"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView3"
+                        app:layout_constraintTop_toBottomOf="@id/home_order_title3" />
+
+                    <TextView
+                        android:id="@+id/home_req_datetime3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:maxLines="1"
+
+                        android:text="40"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/home_order_ImageView3"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView3"
+                        app:layout_constraintTop_toBottomOf="@id/home_req3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home_order_cardView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/home_cardView"
+                app:layout_constraintStart_toStartOf="@+id/home_guildeline"
+                app:layout_constraintTop_toBottomOf="@+id/home_order_cardView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/home_order_ImageView4"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_baseline_account_circle_24"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/home_order_title4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/home_order_title4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="1"
+                        android:text="Total Orders"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView4"
+                        app:layout_constraintTop_toTopOf="@+id/home_order_ImageView4" />
+
+                    <TextView
+                        android:id="@+id/home_req4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:text="assigned"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView4"
+                        app:layout_constraintTop_toBottomOf="@id/home_order_title4" />
+
+                    <TextView
+                        android:id="@+id/home_req_datetime4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:maxLines="1"
+                        android:text="40"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/home_order_ImageView4"
+                        app:layout_constraintStart_toEndOf="@id/home_order_ImageView4"
+                        app:layout_constraintTop_toBottomOf="@id/home_req4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home_currentRatings_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:elevation="2dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/home_cardView"
+                app:layout_constraintStart_toStartOf="@+id/home_cardView"
+                app:layout_constraintTop_toBottomOf="@id/home_order_cardView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green">
+
+                    <TextView
+                        android:id="@+id/home_yourCurrentRatings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/view_your_ratings"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@id/home_ratings"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/home_allReviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/view_all_reviews"
+                        android:textColor="@color/orange"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/home_forward"
+                        app:layout_constraintStart_toStartOf="@+id/home_yourCurrentRatings"
+                        app:layout_constraintTop_toBottomOf="@+id/home_yourCurrentRatings" />
+
+
+                    <TextView
+                        android:id="@+id/home_ratings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="4.9"
+                        android:textColor="@color/orange"
+                        android:textSize="32sp"
+                        app:drawableEndCompat="@drawable/ic_baseline_star_border"
+                        app:layout_constraintBottom_toBottomOf="@+id/home_forward"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/home_yourCurrentRatings"
+                        app:layout_constraintTop_toTopOf="@+id/home_yourCurrentRatings"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        android:id="@+id/home_forward"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/button_design"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_baseline_arrow_forward_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/home_allReviews"
+                        app:layout_constraintEnd_toEndOf="@+id/home_yourCurrentRatings"
+                        app:layout_constraintStart_toEndOf="@+id/home_allReviews"
+                        app:layout_constraintTop_toTopOf="@+id/home_allReviews" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/home_guildeline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
